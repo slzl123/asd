@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+@font-face{
+    font-family: oppo;
+    src: url('../font/OPPOSans-Medium.ttf');
+}
+@font-face{
+    font-family: 方正FW;
+    src: url('../font/FZFWZHUZIAYUANJWE.TTF');
+}           
+body{
+    width: 100%;
+    background-image: url('../images/main-banner1.jpg');
+    background-position: center;
+    background-size: 120%;
+    position: relative;
+}
+.login_box{
+    width: 80%;
+    transition: all 0.3s;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:
+    0px 0.9px 2.2px rgba(0, 0, 0, 0.02),
+    0px 2.2px 5.3px rgba(0, 0, 0, 0.028),
+    0px 4.1px 10px rgba(0, 0, 0, 0.035),
+    0px 7.4px 17.9px rgba(0, 0, 0, 0.042),
+    0px 13.8px 33.4px rgba(0, 0, 0, 0.05),
+    0px 33px 80px rgba(0, 0, 0, 0.07)
+    ;
+    position: relative;
+    left: 50%;
+    top: -60px;
+    z-index: 999;
+    transform: translateX(-50%) translateY(25%);
+}
+.images_box{
+    display: none;
+}
+/* 登录注册页面样式 */
+.Form{
+    width: 100%;
+    height: 600px;
+    float: right;
+    position: relative;
+    background-color: rgb(247, 247, 247);
+    background-image: url('../images/');
+}
+.exit img{
+    width: 40px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+#login h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 思源;
+    margin-bottom: 40px;
+}
+/* 登录 */
+#login{
+    display: block;
+    margin: 60px auto;
+    padding-top: 30px;
+}
+#login .a_2{
+    font-size: 16px;
+    display: block;
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color:brown;
+    font-family: 方正;
+}
+#login .a_1{
+    font-size: 13px;
+    display: block;
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    color:brown;
+    font-family: 方正;
+}                                                            
+#login #btn_login{
+    width: 120px;
+    height: 42px;
+    font-size: 20px;
+    font-family: 方正;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    background: rgb(0,183,234); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(0,183,234,1) 0%, rgba(0,211,211,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,183,234,1) 0%,rgba(0,211,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,183,234,1) 0%,rgba(0,211,211,1) 100%);
+}
+.account,.password{
+    width: 300px;
+    margin: 0 auto;
+    font-family: oppo;
+    position: relative;
+}
+.account span,.password span{
+    font-size: 20px;
+}
+.account input,.password input{
+    width: 200px;
+    height: 40px;
+    padding: 0px 16px 0px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 10px 10px 20px;
+    outline: none;
+    background-color: rgb(230, 227, 227);
+}
+.account .account_img{
+    width: 22px;
+    position: absolute;
+    left: 28px;
+    top: 18px;
+}
+.password .password_img{
+    width: 26px;
+    position: absolute;
+    z-index: 98;
+    left: 28px;
+    top: 17px;
+}
+/* 其它登录方式 */
+.other{
+    width: 200px;
+    height: 80px;
+    margin: 40px auto;
+    text-align: center;
+    opacity: 0.6;
+}
+.other span{
+    width: 140px;
+    color: rgb(158, 158, 158);
+    display: inline-block;
+    padding-bottom: 8px;
+    font-size: 5px;
+    font-family: 思源;
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+.other .other_icon{
+    width: 180px;
+    height: 40px;
+    margin: 4px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.other .other_icon img{
+    width: 30px;
+    margin: 5px 5px 5px 5px;
+}
+/* 注册页面and修改密码 */
+#register,#changepsw{
+    display: black;
+    width: 100%;
+    padding-top: 40px;
+    margin: 20px auto;
+    transition: all 0.3;
+}
+#register h2,#changepsw h2{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 思源;
+    margin-bottom: 40px;
+}
+#register a,#changepsw a{
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color:brown;    
+    font-family: 方正;
+}    
+#register input,#changepsw input{
+    width: 160px;
+    height: 40px;
+    padding: 0px 16px 0px 36px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+    background-color: rgb(230, 227, 227);
+}
+#register span,#changepsw span{
+    font-size: 20px;
+}
+#register .phone img,.verify img,.newpassword img,.ConfirmPwd img,#changepsw .phone img,.verify img,.newpassword img,.ConfirmPwd img{
+    width: 20px;
+    transform: translateX(34px) translateY(5px);
+}
+#register .phone,.newpassword,.ConfirmPwd,.verify,#changepsw .phone,.newpassword,.ConfirmPwd,.verify{
+    width: 260px;
+    margin: 0 auto;
+}
+#verifyPhone{
+    width: 96px !important;
+    padding-left: 16px !important;
+    margin-left: 24px;
+}
+.getVerify{
+    width:80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 6px !important;
+    border: none;
+    cursor:pointer;
+    background-color: rgb(221, 221, 221);
+}
+#registerbtn{
+    width: 120px;
+    height: 42px;
+    font-size: 20px;
+    font-family: oppo;
+    border-radius: 10px;
+    display: block;
+    margin: 40px auto !important;
+    border: none;
+    background: rgb(0,183,234); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(0,183,234,1) 0%, rgba(0,211,211,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,183,234,1) 0%,rgba(0,211,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,183,234,1) 0%,rgba(0,211,211,1) 100%);
+}
+    

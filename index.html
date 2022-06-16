@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China抗疫</title>
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="./css/index.css">
+    <link rel="stylesheet" media="screen and (max-width:1199px) and (min-width:768px)"href="./css/indexipad.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="./css/indexpe.css">
+    <link rel="stylesheet" type="text/css" href="./swiper/swiper-bundle.min.css"/>
+    <script src="./js/axios.min.js"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_left_box">
+                <img src="./images/疫情.png" alt=""id="logo">
+                <span style="font-family: 思源;">China抗疫</span>    
+            </div>
+            <img src="./images/更多.png" alt="" id="more">
+            <div class="nav_right_box">
+                <a href="./index.html" style="color:rgb(251, 78, 78);">首页</a>
+                <a href="#volunteer">志愿者</a>
+                <a href="./html/overseas.html">海外疫情</a>
+                <a href="./html/feverForm.html">发热上报</a>
+                <a href="./html/login.html" class="login">登录</a>
+            </div>
+        </nav>
+        <section>
+            <img src="./images/info.png" alt="" class="img_bg_1">
+            <h2>新冠肺炎(COVID-19)暴发</h2>
+            <h4>Coronavirus disease(COVID-19) outbreak</h4>
+            <p>大多数感染 COVID-19 病毒的人会出现轻度至中度呼吸道疾病，需要特殊治疗。</p>
+            <div class="button_container">
+                <a href="./html/Safety.html">防疫手册</a>
+                <a href="./html/feverForm.html" style="background-color:red;">发热上报</a>
+            </div>
+        </section>
+        <div class="epidemic">
+            <div class="epidemic_box epidemic_box_1">
+                <div class="data_box">
+                    <h4>国内疫情实时数据</h4>
+                    <div class="years">
+                        <div id="YY"></div>
+                        <div>年</div>
+                        <div id="MM"></div>
+                        <div>月</div>
+                        <div id="dd"></div>
+                        <div>日</div>
+                    </div>
+                    <div class="time">
+                        <div id="HH">00</div>
+                        <div>:</div>
+                        <div id="mm">00</div>
+                        <div>:</div>
+                        <div id="ss">00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="epidemic_box epidemic_box_2">
+                <div class="data_box">
+                    <p>较昨日<span class="Diagnosed_yesterday">0</span></p>
+                    <span class="epidemic_data Diagnosed" style="color:#f78b00;">0000000</span>
+                    <h3>现存确诊</h3>
+                </div>
+            </div>
+            <div class="epidemic_box epidemic_box_3">
+                <div class="data_box">
+                    <p>较昨日<span class="asymptomatic_yesterday" style="color: rgb(0, 176, 26);">0</span></p>
+                    <span class="epidemic_data asymptomatic" style="color:rgb(253, 158, 158) ;">000000</span>
+                    <h3>无症状人数</h3>
+                </div>
+            </div>
+            <div class="epidemic_box epidemic_box_4">
+                <div class="data_box">
+                    <p>较昨日<span class="cure_yesterday">0</span></p>
+                    <span class="epidemic_data cure" style="color:#36c97b;">000000</span>
+                    <h3>累计治愈</h3>
+                </div>
+            </div>
+            <div class="epidemic_box epidemic_box_5">
+                <div class="data_box">
+                    <p>较昨日<span class="deadCount_yesterday">0</span></p>
+                    <span class="epidemic_data deadCount" style="color:#cc0c1b;">000000</span>
+                    <h3>累计死亡</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="introduce">
+            <div class="introduce_left">
+                <img src="./images/about-img.png" alt="">
+            </div>
+            <div class="introduce_right">
+                <h2>关于疾病</h2>
+                <h3>什么是冠状病毒？</h3>
+                <p>
+                    冠状病毒病（COVID-19）是一种由新发现的冠状病毒引起的传染病,大多数感染COVID-19病毒的人会经历轻度至中度的呼吸系统疾病，并且需特殊治疗即可康复。老年人和患有心血管疾病等潜在疾病的人。
+                </p>
+                <p>
+                    当感染者咳嗽或打喷嚏时，COVID-19 病毒主要通过唾液飞沫或从鼻子排出的分泌物传播，因此必须注意口鼻防护。
+                </p>
+                <div class="icon_symptom">
+                    <div>
+                        <img src="./images/发烧.png" alt="">
+                        <span>发烧</span>
+                    </div>
+                    <div>
+                        <img src="./images/疲惫.png" alt="">
+                        <span>疲惫</span>
+                    </div>
+                    <div>
+                        <img src="./images/百日咳con.png" alt="">
+                        <span>干咳</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="symptom">
+            <h1> 关于症状</h1>
+            <h2>2022冠状病毒常见症状</h2>
+            <div class="symptom_box">
+                <ul>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/fever.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>发热(FEVER)</h3>
+                            <h2>高烧</h2>
+                            <p>新冠病毒造成了肺部炎症，大量的炎症因子及细胞因子对体温中枢造成刺激，产生发热。</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/呼吸急促.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>干咳(COUGH)</h3>
+                            <h2>干咳</h2>
+                            <p>病毒感染引起肺组织的炎症刺激而产生咳嗽，干咳现象因人而异。</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/throat.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>咽喉痛(Cough)</h3>
+                            <h2>咽喉痛</h2>
+                            <p>新型冠状病毒感染部分会表现为咽喉疼痛，要首先排除是否为新型冠状病毒感染。</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/关节痛.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>关节痛(Aches And Pains)</h3>
+                            <h2>关节痛</h2>
+                            <p>新冠关节痛通常表现为乏力、发烧、流鼻涕，还有可能会出现呼吸困难的症</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/腹泻.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>腹泻(Dyspnoea)</h3>
+                            <h2>腹泻</h2>
+                            <p>感染新型冠状病毒肺炎会引起腹泻,当新型冠状病毒侵袭到消化道后,患者可能会出现恶心</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                    <li>
+                        <div class="symptom_img">
+                            <div>
+                                <p>发现有该症状及时治疗</p>
+                            </div>
+                            <img src="./images/breath.png" alt="">
+                        </div>
+                        <div class="symptom_body">
+                            <h3>呼吸(BREATH)</h3>
+                            <h2>呼吸急促</h2>
+                            <p>感染新型冠状病毒后会侵犯到人体肺部，在肺部功能受到损害时，可能出现肺部纤维化.</p>
+                        </div>
+                        <a href="javascript:;">了解更多</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Prevention">
+            <h1>新冠病毒</h1>
+            <h2>Covid-19预防</h2>
+            <p>(Covid-19 Prevention)</p>
+            <ul class="Prevention_ul">
+                <li>
+                    <div>
+                        <img src="./images/p-1.png" alt="">
+                    </div>
+                    <span>勤洗手</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/p-2.png" alt="">
+                    </div>
+                    <span>出门戴口罩</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/p-3.png" alt="">
+                    </div>
+                    <span>避免接触</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="./images/p-4.png" alt="">
+                    </div>
+                    <span>咳嗽捂嘴</span>
+                </li>
+            </ul>
+        </div>
+        <div class="prevention">
+            <h1>预防</h1>
+            <h2>如何保护自己</h2>
+            <div class="prevention_box">
+                <div class="prevention_img">
+                </div>
+                <ul class="prevention_ul">
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/洗手.png" alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>清洗双手</h2>
+                                <p>出门前后勤洗手防止将细菌病毒等带回家中。<a href="">了解详情</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/禁止聚众.png" alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>避免接触</h2>
+                                <p>在疫情当下不进行过多的肢体接触，唾液接触等。<a href="">了解详情</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/居家.png" alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>居家隔离</h2>
+                                <p>配合社区防控，必要的时候做到足不出户，不串门。<a href="">了解详情</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/脸部卫生.png" alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>清洗脸颊</h2>
+                                <p>在手触碰完脸颊之后尽量做到清洗脸颊放手手部细菌..<a href="">了解详情</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/带口罩.png" alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>佩戴口罩</h2>
+                                <p>疫情期间做到出门在外时刻佩戴口罩，特别是在人...<a href="">了解详情</a>  </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="prevention_bg"></div>
+                        <div class="prevention_body">
+                            <div class="prevention_body_img">
+                                <img src="./images/icon/人群.png    " alt="">
+                            </div>
+                            <div class="prevention_txt">
+                                <h3>远离人群</h2>
+                                <p>做到不聚众，远离人群较多的地方。<a href="">了解详情</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 定义锚点 -->
+        <a name="video"></a>
+        <div class="video">
+            <h2>疫情下的中国</h2>
+            <h3>China under the epidemic</h3>
+            <img src="./images/virus-1.png" alt="" class="video_img">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1>疫情中的逆行者</h1>
+                        <div>
+                            <video poster="./images/志愿者.jpg" src="./mp4/443299323-1-80.mp4" controls></video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>全民抗疫，众志成城</h1>
+                        <div>
+                            <video poster="./images/核酸.jpg" src="./mp4/153858399_nb2-1-80.mp4" controls></video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>抗疫宣传片《印迹》</h1>
+                        <div>
+                            <video poster="./images/全民战疫.jpg" src="./mp4/188211765_nb2-1-64.mp4" controls></video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>从火神山、雷神山到“方舱”医院以中国速度与疫情赛跑！</h1>
+                        <div>
+                            <video poster="./images/雷火神山.jpg" src="./mp4/245754340-1-32.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <img src="./images/大白卡通人物.png" alt="" class="video_img_2">
+        </div>
+        <!-- 志愿者 -->
+        <a name="volunteer"></a>
+        <div class="volunteer">
+            <div class="scroll_img">
+                <div id="bg"></div>
+                <h2>Chinese 志 愿 者</h2>
+                <marquee marquee direction="right" scrollamount="5" behavior="alternate">
+                    <div class="scroll_img_box">
+                        <div><img src="./images/lunbo_img/lunbo_1.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_2.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_3.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_4.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_5.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_6.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_7.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_8.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_9.jpg" alt=""></div>
+                        <div><img src="./images/lunbo_img/lunbo_10.jpg" alt=""></div>
+                    </div>
+                </marquee>
+            </div>
+            <div class="add_volunteer">
+                <div>
+                    <h1>加入志愿者</h1>
+                    <p>输入您的手机号码24H内将会有工作人员联系您</p>
+                    <input type="text" placeholder="+86" id="inputPhone">
+                    <button id="btnPhone">加入</button>
+                </div>
+            </div>
+            <img src="./images/核酸.png" class="volunteer_img" alt="">
+        </div>
+    </article>  
+    <footer>
+        <div class="footer_bg"></div>
+        <div class="footer_box">
+            <div class="footer_connect">
+                <div class="footer_conation">
+                    <h2>导航</h2>   
+                    <div class="footer_connect_nav">
+                        <a href="./html/overseas.html">海外疫情</a>
+                        <a href="./html/feverForm.html">发热上报</a>
+                        <a href="">防疫手册</a>
+                    </div>
+                </div>
+                <div class="footer_conation">
+                    <h2>联系我们</h2>
+                    <div class="footer_connect_nav">
+                        <a href="./html/overseas.html">888-888-888</a>
+                        <a href="./html/feverForm.html">3110250948@qq.com</a>
+                        <a href="">www.123.com</a>
+                    </div>
+                </div>
+                <div class="footer_conation">
+                    <h2>地区防控电话</h2>
+                    <div class="footer_connect_nav">
+                        <a href="./html/overseas.html">888-888-888</a>
+                        <a href="./html/feverForm.html">666-666-666</a>
+                        <a href="">123-123-123</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_Copyright">
+                @Copyright reserved to zhongxiang
+            </div>
+        </div>
+    </footer>
+    <a href="javascript:;" id="returnTop">
+        <img src="./images/icon/top.png" alt="">
+    </a>
+    <script src="./js/index.js"></script>
+</body>
+</html>

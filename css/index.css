@@ -1,0 +1,886 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    height: 1800px;
+    width: 100%;
+    position: relative;
+}
+a:hover{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 思源;
+    src: url('../font/GenJyuuGothic-Medium.TTF');
+}
+@font-face{
+    font-family: 阿里;
+    src: url('../font/Alibaba-PuHuiTi-Bold.otf');
+}
+@font-face {
+    font-family: 方正FW;
+    src: url('../font/FZFWZHUZIAYUANJWE.TTF');
+}
+@font-face {
+    font-family: '方正简体';
+    src: url('../font/方正黑体简体.TTF');
+}
+@keyframes aimi{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+header{
+    width: 100%;
+    height: 840px;
+    background-color: aqua;
+    position: relative;
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    width: 100%;
+    height: 65px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.3s;
+}
+nav .nav_left_box{
+    width: 240px;
+    height: 60px;
+    font-size: 30px;
+    color: aliceblue;
+}
+nav .nav_right_box{
+    width: 500px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 550;
+}
+nav .nav_right_box a{
+    color: aliceblue;
+    transition: all 0.3s;
+}
+nav .nav_right_box a:hover{
+    color: rgb(255, 171, 171);
+}
+#logo{
+    width: 50px;
+    height: 50px;
+    transform: translateY(3px);
+}
+#more{
+    display: none;
+}
+.login{
+    background-color: rgb(255, 107, 107);
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;    
+}
+nav .nav_left_box span{
+    display: inline-block;
+    transform: translateY(-9px);
+}
+.nav-img{
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* nav部分结束 */
+.img_bg_1{
+    position: absolute;
+    left: 40px;
+    width: 200px;
+    opacity: 0.1;
+}
+
+/* section部分 */
+section{
+    width: 800px;
+    height: 600px;
+    line-height:60px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section h2,h4{
+    text-align: center;
+}
+section h2{
+    font-size: 66px;
+    color: #fff;
+    font-family: 方正FW;
+}
+section h4{
+    color: aliceblue;
+    letter-spacing: 10px;
+}
+section p{
+    color: aliceblue;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+/* 防疫手册和发热上报按钮样式 */
+.button_container{
+    width: 340px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    margin:80px auto;
+}
+.button_container a{
+    display: block;
+    height: 50px;
+    width: 140px;
+    font-size: 18px;
+    background: none;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 疫情实况 */
+.epidemic{
+    width:1180px;
+    height: 160px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom:-80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow:
+    0px -20px 5.4px rgba(0, 0, 0, 0.02),
+    0px -20px 13px rgba(0, 0, 0, 0.028),
+    0px -20px 24.4px rgba(0, 0, 0, 0.035),
+    0px -20px 43.6px rgba(0, 0, 0, 0.042),
+    0px -20px 81.5px rgba(0, 0, 0, 0.05),
+    0px -20px 195px rgba(0, 0, 0, 0.07)
+}
+
+.epidemic .epidemic_box{
+    width: 238px;
+    height: 160px;
+    text-align: center;
+    background-size: 200px;
+    font-family:阿里;
+    position: relative;
+}
+.epidemic .epidemic_box h4{
+    font-size: 20px;
+    font-weight: 550;
+    color: rgb(255, 82, 82);
+}
+/* 年月 */
+.epidemic .epidemic_box .years{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+/* 时间 */
+.epidemic .epidemic_box .time{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.epidemic .epidemic_box .data_box{
+    width:100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.epidemic .epidemic_box .data_box h3{
+    font-family: 'FZJT';
+    font-size: 20px;
+}
+.epidemic .epidemic_box .data_box p{
+    font-size: 13px;
+    font-family: 'FZJT';
+}
+.epidemic .epidemic_box .data_box p span{
+    color: red;
+}
+/* 具体数值样式 */
+.epidemic_data{
+    font-size: 40px;
+}
+.epidemic_box_1{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.epidemic_box_2{
+    background-color: #fef3e5;
+}
+.epidemic_box_3{
+    background-color: #ebf9f2;
+}
+.epidemic_box_4{
+    background-color: #d3ffe9;
+}
+.epidemic_box_5{
+    background-color: #fae6e8;
+}
+
+
+/* 主题内容 */
+article{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-top: 40px;
+    transition: all 0.3s;
+}
+article .introduce{
+    width: 65%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+article .introduce_left{
+    width: 50%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+}
+article .introduce .introduce_left img{
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: 45px;
+    width: 400px;
+    transform: translateX(-30%);
+}
+article .introduce .introduce_right{
+    width: 50%;
+    height: 600px;
+    position: absolute;
+    right: 0;
+}
+article .introduce .introduce_right h2{
+    margin: 40px 20px 10px 40px;
+    padding: 6px;
+    background-color: red;
+    color: #fff;
+    width: 100px;
+    display: inline-block;
+}
+article .introduce .introduce_right h3{
+    font-size: 30px;
+    margin: 20px 20px 10px 40px;
+}
+article .introduce .introduce_right p{
+    display: block;
+    width: 90%;
+    margin: 20px 20px 20px 40px;
+    font-size: 16px;
+    text-indent: 2em;
+    letter-spacing: 2px;
+    line-height: 30px;
+    text-align: justify;
+}
+article .introduce .introduce_right .icon_symptom{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+article .introduce .introduce_right .icon_symptom img{
+     width: 60px;
+}
+article .introduce .introduce_right .icon_symptom span{
+    margin: 10px;
+}
+article .introduce .introduce_right .icon_symptom div{
+    display: flex;
+    align-items: center;
+}
+
+/* 关于症状 */
+.symptom{
+    width: 100%;
+    padding-top: 50px;
+    position: relative;
+    background-color: #f8f8f8;
+}
+.symptom h1{
+    color: rgb(206, 0, 0);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.symptom h2{
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+.symptom ul{
+    width: 65%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.symptom ul li{
+    width: 360px;   
+    height: 445px;
+    background-color: #f8f8f8;
+    border: 1px solid rgb(223, 223, 223);
+    transition: all 0.5s;
+    margin: 10px;
+    overflow: hidden; 
+    position: relative;  
+}
+.symptom ul li:hover{
+    box-shadow:
+    0px 0px 7px rgba(0, 0, 0, 0.02),
+    0px 0px 16.9px rgba(0, 0, 0, 0.028),
+    0px 0px 31.8px rgba(0, 0, 0, 0.035),
+    0px 0px 56.7px rgba(0, 0, 0, 0.042),
+    0px 0px 106.1px rgba(0, 0, 0, 0.05),
+    0px 0px 254px rgba(0, 0, 0, 0.07)
+    ;
+}
+.symptom ul li:hover .symptom_img div{
+    transition: all 0.7s;
+    position: absolute;
+    top: 0;
+}
+.symptom ul li:hover .symptom_body h3{  
+    color: black;
+    transition: all 1s;
+}
+.symptom ul li:hover .symptom_body h2{
+    color: rgb(255, 0, 0);
+    transition: all 1s;
+}                                                       
+.symptom ul li .symptom_img{
+    width: 100%;
+    height: 220px;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+}
+.symptom ul li .symptom_img div{
+    width: 100%;
+    height: 220px;
+    background-color: black;
+    position: absolute;
+    top: -300px;
+    opacity: 0.6;
+    z-index: 666;
+    color: rgb(255, 255, 255);
+}
+.symptom ul li .symptom_img div p{
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1 !important;
+}
+.symptom ul li .symptom_img img{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px; 
+}
+.symptom ul li .symptom_body{
+    padding: 20px;
+}
+.symptom ul li .symptom_body h3{
+    color: rgb(165, 0, 0);
+}
+.symptom ul li .symptom_body h2{
+    margin: 10px;
+}
+.symptom ul li .symptom_body p{
+    color: rgb(141, 141, 141);
+    font-size: 15px ;
+    letter-spacing: 2px;
+    font-family: 'FZJT';
+}
+.symptom ul li a{
+    width: 120px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(162, 162, 162);
+    background-color: rgb(236, 235, 235);
+    transition: all 0.3s;
+}
+.symptom ul li a:hover{
+    background-color: rgb(17, 103, 214);
+    color: #fff;
+}
+/* 预防 */
+.Prevention{
+   width: 100%;
+   height: 750px;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url('../images/main-banner1.jpg');
+   background-position: center;
+   background-size: cover;
+}
+.Prevention h1{
+    font-size: 22px;
+    color: rgb(231, 22, 22);
+    letter-spacing: 4px;
+}
+.Prevention h2{
+    font-size: 40px;
+    margin: 20px 0px 6px 0px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+.Prevention p{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.Prevention .Prevention_ul{
+    width: 70%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.Prevention .Prevention_ul li:hover div{
+    width: 200px !important;
+    height: 200px !important;
+}
+.Prevention .Prevention_ul li div{
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow:
+    0px 0px 7px rgba(0, 0, 0, 0.02),
+    0px 0px 16.9px rgba(0, 0, 0, 0.028),
+    0px 0px 31.8px rgba(0, 0, 0, 0.035),
+    0px 0px 56.7px rgba(0, 0, 0, 0.042),
+    0px 0px 106.1px rgba(0, 0, 0, 0.05),
+    0px 0px 254px rgba(0, 0, 0, 0.07)
+    ;
+    border-radius: 50%;
+}
+.Prevention .Prevention_ul li span{
+    margin: 20px 0px 20px 0px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 550;
+}
+.Prevention .Prevention_ul li div img{
+    width: 100%;
+}
+.Prevention .Prevention_ul li{
+    width: 160px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* 抗疫视频 */
+.video{
+    width: 100%;
+    margin-top: 50px;
+    padding-bottom: 120px;
+    position: relative;
+}
+.video h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0px 0px 0px;
+}
+.video h3{
+    text-align: center;
+    font-size: 16px;
+}
+.video .video_img{
+    width:16%;
+    position: absolute;
+    top: 0px;
+    right: 4%;
+    opacity: 0.4;
+    animation: aimi 10s linear infinite;
+}
+.video .video_img_2{
+    width: 200px;
+    position: absolute;
+    opacity: 0.5;
+    left: 0;
+    bottom: 0;
+}
+.video .swiper{
+     width: 80%;
+     margin-top: 30px;
+}
+.video .swiper .swiper-wrapper .swiper-slide h1{
+     margin: 10px;
+     text-align: center;
+     color: rgb(90, 127, 248);
+}
+.video .swiper .swiper-wrapper .swiper-slide div{
+    width: 90%;
+    border-radius: 10px;
+    background-color: #000000;
+    overflow: hidden;
+    margin: 10px auto 40px auto;
+}
+.video .swiper .swiper-wrapper .swiper-slide div video{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 志愿者图片集*/
+article .volunteer{
+    width: 100%;
+    height: 800px;
+    padding-top: 100px;
+    background-color: #eeeeee;
+    background-image: url('../images/shape-pattern-top.png');
+    position: relative;   
+}
+article .scroll_img{
+    width: 72%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+
+}
+article .scroll_img #bg{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 888;
+}
+article .scroll_img h2{
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    z-index: 888;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+article .scroll_img marquee{
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+article .scroll_img marquee .scroll_img_box{
+    width: 500%;
+    display: flex;
+}
+article .scroll_img marquee .scroll_img_box div{
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    float: left;
+    overflow: hidden;
+}
+article .scroll_img marquee div img{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 加入志愿者 */
+.add_volunteer{
+    width: 72%;
+    height: 400px;
+    margin: 0 auto;
+}
+.volunteer_img{
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.add_volunteer div{
+    padding-top: 20px;
+}
+.add_volunteer h1 {
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    color: rgb(124, 0, 0);
+}
+.add_volunteer p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #8f8f8f;
+}
+.add_volunteer input{
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    height: 60px;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 30px auto;
+    padding: 0px 10px 0px 10px;
+}  
+.add_volunteer button {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
+.add_volunteer button {
+    margin: 0 auto;
+    border: none;
+    font-size: 20px;
+    width: 140px;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+.add_volunteer button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+} 
+
+/* 如何保护自己 */
+.prevention{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+.prevention h1 {
+    color: #009ffc;
+}
+.prevention h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.prevention h1,.prevention h2{
+    letter-spacing: 6px;
+    text-align: center;
+}
+.prevention .prevention_box{
+    width: 85%;
+    margin: 100px auto;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+}
+.prevention .prevention_box .prevention_ul{
+    width: 80%;
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    float: right;
+    margin-left: 25px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.prevention .prevention_box .prevention_ul li{
+    position: relative;
+    margin: 20px 0px 30px 0px;
+}
+.prevention .prevention_box .prevention_ul li .prevention_bg{
+    width: 320px;
+    height: 120px;
+    background-color: #f1f1f4;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.prevention .prevention_box .prevention_ul li:hover .prevention_bg{
+    background-color: #130947;
+    transition: all 0.8s;
+}
+.prevention .prevention_box .prevention_ul li .prevention_body{
+    width: 280px;
+    height: 80px;   
+    padding: 20px;
+    position: absolute;
+    top: 12px;
+    left:-12px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+.prevention .prevention_box .prevention_ul li .prevention_body .prevention_txt{
+    width: 190px;
+    float: right;
+}
+.prevention .prevention_box .prevention_ul li .prevention_body .prevention_txt p{
+    font-size: 13px;
+    line-height: 24px;
+    margin-top: 6px;
+}
+.prevention .prevention_box .prevention_ul li .prevention_body .prevention_txt p{
+    color: #000000;
+}
+.prevention_body .prevention_body_img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+.prevention_body .prevention_body_img img{
+    width: 100%;
+}
+.prevention_body .prevention_txt{
+    width: 420px;
+    font-size: 16px;
+}
+
+/* 如何保护自己图片 */
+.prevention_img{
+     width: 400px;
+     overflow: hidden;
+     background-image: url("../images/防护_img/洗手.webp");
+     background-size: cover;
+     background-position: center;
+     transition: all 0.3s;
+}
+
+
+
+
+/* 页脚 */
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: #130947;
+    background-image:   url('../images/main-banner3.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+footer .footer_box{
+    width: 80%;
+    height: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer_bg{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #130947;
+    opacity: 0.9;
+}
+footer .footer_box .footer_connect{
+    width: 87%;
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+footer .footer_box .footer_connect .footer_conation{
+    width: 200px;
+}
+footer .footer_box .footer_connect_nav{
+    display: flex;
+    flex-direction: column;
+}
+footer .footer_box .footer_connect h2{
+    color: #fff;
+}
+footer .footer_box .footer_connect .footer_connect_nav a{
+    color: rgb(204, 223, 255);
+    line-height: 40px;
+    transition: all 0.3s;
+}
+footer .footer_box .footer_connect .footer_connect_nav a:hover{
+    color: rgb(196, 0, 0);
+}
+footer .footer_box .footer_Copyright{
+    width: 90%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #212a58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* 返回顶部 */
+#returnTop{
+    width: 40px;
+    height: 40px;
+    background-color: #fc2600;
+    position: fixed; 
+    right: 2%;
+    bottom: 4%;
+    z-index: 1000;
+    display: none;
+    border-radius: 20%;
+}
+#returnTop img{
+    width: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

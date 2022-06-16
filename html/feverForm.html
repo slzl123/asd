@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发热上报</title>
+    <link rel="stylesheet" media="screen and (min-width:1200px)" href="../css/feverForm.css">
+    <link rel="stylesheet" media="screen and (max-width:1199px) and (min-width:767px)" href="../css/feverFormipad.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="../css/feverFormpe.css">
+    <script src="../js/feverForm.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav_left_box">
+            <img src="../images/疫情.png" alt=""id="logo">
+            <span style="font-family: 思源;">China抗疫</span>    
+        </div>
+        <img src="../images/更多.png" alt="" id="more">
+        <div class="nav_right_box">
+            <a href="../index.html">首页</a>
+            <a href="../html/overseas.html">海外疫情</a>
+            <a href="../html/login.html" class="login">登录</a>
+        </div>
+    </nav>
+    <div class="feverForm">
+        <div class="feverbox">
+            <h1>发热上报<img src="./images/icon/发热-jzl.png" alt=""></h1>
+            <form action="">
+                <div class="form">
+                    <div class="form_box">
+                        <h2><i>*</i>基本信息</h2>
+                        <div>
+                            <span>姓名:</span>
+                            <input type="text" class="input_class">
+                        </div>
+                        <div>
+                            <span>手机号码:</span>
+                            <input type="phone" class="input_class">
+                        </div>
+                        <div>
+                            <span>身份证:</span>
+                            <input type="text" class="input_class">
+                        </div>
+                        <div style="display: block;" class="sex">
+                            <span>性别:</span>
+                            男<input type="radio" name="sex"> 女<input type="radio" name="sex"><br>
+                        </div>
+                        <div>
+                            <span>出生日期:</span>
+                            <input type="date" class="input_date">
+                        </div>
+                        <div>
+                            <span>所处地区:</span>
+                            <input type="text" class="input_class" placeholder="省-市-县-村-镇">
+                        </div>
+                    </div>
+                    <div class="form_box_2">
+                        <h2><i>*</i>身体状况</h2>
+                        <div>
+                            <input type="checkbox"><span>发热37.3°C含以上</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>干咳</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>乏力</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>鼻塞流涕</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>咽痛</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>嗅觉/味觉减弱</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>结膜炎</span>
+                        </div>
+                        <div>
+                            <input type="checkbox"><span>腹泻</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 补充说明 -->
+                <div class="Replenish">
+                    <h2>补充说明</h2>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+                <input type="submit" placeholder="提交" id="btn">
+            </form> 
+        </div>
+    </div>
+    <footer>
+        <div class="footer_bg"></div>
+        <div class="footer_box">
+            <div class="footer_connect">
+                <div class="footer_conation">
+                    <h2>导航</h2>   
+                    <div class="footer_connect_nav">
+                        <a href="./overseas.html">海外疫情</a>
+                        <a href="./feverForm.html">发热上报</a>
+                        <a href="./Safety.html">防疫手册</a>
+                    </div>
+                </div>
+                <div class="footer_conation">
+                    <h2>联系我们</h2>
+                    <div class="footer_connect_nav">
+                        <a href="javascript:;">888-888-888</a>
+                        <a href="javascript:;">3110250948@qq.com</a>
+                        <a href="javascript:;">www.123.com</a>
+                    </div>
+                </div>
+                <div class="footer_conation">
+                    <h2>地区防控电话咨询</h2>
+                    <div class="footer_connect_nav">
+                        <a href="javascript:;">888-888-888</a>
+                        <a href="javascript:;">666-666-666</a>
+                        <a href="javascript:;">123-123-123</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_Copyright">
+                @Copyright reserved to zhongxiang
+            </div>
+        </div>
+    </footer>
+    <a href="javascript:;" id="returnTop">
+        <img src="../images/icon/top.png" alt="">
+    </a>
+</body>
+</html>
